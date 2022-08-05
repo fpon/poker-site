@@ -9,7 +9,7 @@
         "modules/_scroll.scss",
         "modules/_animation.scss",
         "breakpoints/_base.scss",
-        "breakpoints/_600up.scss"
+        "breakpoints/_750up.scss"
     ],
     "names": [],
     "file": "style.css"
