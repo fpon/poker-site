@@ -47,6 +47,18 @@
   }
 }
 
+.menu-box {
+  &__img {
+    height: 250px;
+  }
+  &__img-whisky {
+    height: 250px;
+    & img {
+      object-position: 50% 32%;
+    }
+  }
+}
+
 .reservation {
   padding: 20% 10%;
 }

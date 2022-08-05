@@ -377,6 +377,7 @@
 }
 
 .menu-button a {
+  display: block;
   text-decoration: none;
   outline: none;
   color: #e9ca88;
@@ -1200,6 +1201,16 @@ body {
   }
   .footer__copy {
     padding-top: 5%;
+  }
+  .menu-box__img {
+    height: 250px;
+  }
+  .menu-box__img-whisky {
+    height: 250px;
+  }
+  .menu-box__img-whisky img {
+    -o-object-position: 50% 32%;
+       object-position: 50% 32%;
   }
   .reservation {
     padding: 20% 10%;
