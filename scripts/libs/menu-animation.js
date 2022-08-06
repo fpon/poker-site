@@ -16,12 +16,12 @@ class MobileMenu {
   
     _getEventType() {
       const isTouchCapable =
-        "ontouchstart" in window ||
+        "ontouchend" in window ||
         (window.DocumentTouch && document instanceof window.DocumentTouch) ||
         navigator.maxTouchPoints > 0 ||
         window.navigator.msMaxTouchPoints > 0;
   
-      return isTouchCapable ? "touchstart" : "click";
+      return isTouchCapable ? "touchend" : "click";
     }
   
     _toggle() {
@@ -32,6 +32,6 @@ class MobileMenu {
       this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
       this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
     }
-  }
+}
   
 new MobileMenu();
