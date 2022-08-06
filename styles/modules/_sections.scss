@@ -26,6 +26,11 @@
 }
 
 
+// .anchor {
+//   display: block;
+//   padding-top: 70px;
+//   margin-top: -70px;
+// }
 
 .shop-news {
   @extend .section-layout;
@@ -187,6 +192,7 @@
   position: relative;
   width: 100%;
   text-align: center;
+  z-index: 1000;
 }
 
 .menu-button {
