@@ -229,6 +229,7 @@
   color: #e0e0e0 !important;
   height: 40px;
   z-index: 10000;
+  pointer-events: auto;
 }
 
 .mobile-nav__list img {
