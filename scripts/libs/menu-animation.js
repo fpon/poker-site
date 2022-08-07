@@ -16,17 +16,17 @@ class MobileMenu {
       this.DOM.anchors = document.querySelectorAll('a[href^="#"]');
       this.eventType = this._getEventType();
       this._addEvent();
-      this._removeEvent();
+      // this._removeEvent();
     }
   
     _getEventType() {
       const isTouchCapable =
-        "ontouchend" in window ||
+        "ontouchstart" in window ||
         (window.DocumentTouch && document instanceof window.DocumentTouch) ||
         navigator.maxTouchPoints > 0 ||
         window.navigator.msMaxTouchPoints > 0;
   
-      return isTouchCapable ? "touchend" : "click";
+      return isTouchCapable ? "touchstart" : "click";
     }
   
     _toggle() {
@@ -35,15 +35,16 @@ class MobileMenu {
   
     _addEvent() {
       this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
-      this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
+      const clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
+      this.DOM.cover.addEventListener(clickEventType, this._toggle.bind(this));
+      // this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
     }
     
-    _removeEvent() {
-      for (let i = 0; i < this.DOM.anchors.length; i++) {
-        this.DOM.anchors[i].removeEventListener(this.eventType, this._addEvent, false);
-        // this.DOM.anchors.removeEventListener(this.eventType, this._addEvent, false);
-      }
-    }
+    // _removeEvent() {
+    //   for (let i = 0; i < this.DOM.anchors.length; i++) {
+    //     this.DOM.anchors[i].removeEventListener(this.eventType, this._addEvent, false);
+    //   }
+    // }
 }
   
 new MobileMenu();
