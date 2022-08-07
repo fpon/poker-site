@@ -4,12 +4,16 @@ window.addEventListener('DOMContentLoaded', (e) =>{
     FadeUp.classList.add( "fade-up" );
 });
 
+
+
+
 class MobileMenu {
     constructor() {
       this.DOM = {}; 
       this.DOM.btn = document.querySelector('.mobile-menu-btn');
       this.DOM.cover = document.querySelector('.mobile-nav__list');
       this.DOM.container = document.querySelector('#global-container');
+      this.DOM.anchor = document.querySelectorAll('a[href^="#"]');
       this.eventType = this._getEventType();
       this._addEvent();
     }
@@ -31,6 +35,7 @@ class MobileMenu {
     _addEvent() {
       this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
       this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
+      this.DOM.anchor.removeEventListener(this.eventType, this._toggle.bind(this))
     }
 }
   
