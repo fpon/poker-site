@@ -15,6 +15,7 @@ class MobileMenu {
       this.DOM.container = document.querySelector('#global-container');
       this.DOM.anchors = document.querySelectorAll('a[href^="#"]');
       this.eventType = this._getEventType();
+      this.smartTouch = this._smart();
       this._addEvent();
       this._removeEvent();
     }
@@ -32,17 +33,20 @@ class MobileMenu {
     _toggle() {
       this.DOM.container.classList.toggle("menu-open");
     }
-  
+
+    _smart() {
+      const clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
+    }
+   
     _addEvent() {
       this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
-      const clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
-      this.DOM.cover.addEventListener(clickEventType, this._toggle.bind(this));
+      this.DOM.cover.addEventListener(this.smartTouch, this._toggle.bind(this));
       // this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
     }
     
     _removeEvent() {
       for (let i = 0; i < this.DOM.anchors.length; i++) {
-        this.DOM.anchors[i].removeEventListener(this.eventType, this._addEvent, false);
+        this.DOM.anchors[i].removeEventListener(this.smartTouch, this._addEvent, false);
       }
     }
 }
