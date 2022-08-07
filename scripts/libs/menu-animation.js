@@ -16,7 +16,7 @@ class MobileMenu {
       this.DOM.anchors = document.querySelectorAll('a[href^="#"]');
       this.eventType = this._getEventType();
       this._addEvent();
-      // this._removeEvent();
+      this._removeEvent();
     }
   
     _getEventType() {
@@ -40,11 +40,11 @@ class MobileMenu {
       // this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
     }
     
-    // _removeEvent() {
-    //   for (let i = 0; i < this.DOM.anchors.length; i++) {
-    //     this.DOM.anchors[i].removeEventListener(this.eventType, this._addEvent, false);
-    //   }
-    // }
+    _removeEvent() {
+      for (let i = 0; i < this.DOM.anchors.length; i++) {
+        this.DOM.anchors[i].removeEventListener(this.eventType, this._addEvent, false);
+      }
+    }
 }
   
 new MobileMenu();
