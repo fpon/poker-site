@@ -41,7 +41,6 @@ class MobileMenu {
     _addEvent() {
       this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
       this.DOM.cover.addEventListener(this.smartTouch, this._toggle.bind(this));
-      // this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
     }
     
     _removeEvent() {
