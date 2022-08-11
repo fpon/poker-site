@@ -287,8 +287,12 @@
   margin-right: 10%;
   margin-left: 10%;
   margin-bottom: 10%;
-  text-align: left;
+  text-align: center;
   letter-spacing: 0.04em;
+}
+
+.concept br {
+  display: none;
 }
 
 .menu-img {
@@ -543,6 +547,11 @@
   text-align: center;
 }
 
+.shop-info__inner {
+  display: inline-block;
+  width: 100%;
+}
+
 .shop-info dt {
   color: #e0e0e0;
   font-size: 1.1em;
@@ -598,8 +607,6 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 70%;
-     object-position: 50% 70%;
 }
 
 .info-header__title {
@@ -642,10 +649,20 @@
   background-image: url(../images/poker-7.webp);
   position: -webkit-sticky;
   position: sticky;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(156, 137, 52, 0.1);
   background-blend-mode: lighten;
   padding: 30% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .reservation__text {
@@ -1078,6 +1095,10 @@ body {
   cursor: pointer;
 }
 
+.header__nav {
+  display: none;
+}
+
 .header__logo {
   margin-left: 15px;
 }
@@ -1203,18 +1224,159 @@ body {
   .footer__copy {
     padding-top: 5%;
   }
+  .section-text, .news-hd p, .menu-header__text, .poker-header__text, .info-header__text, .atmosphere-header__text {
+    margin-bottom: 5%;
+  }
+  .shop-news__inner {
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    padding-top: 0%;
+    display: inline-block;
+  }
+  .news-hd {
+    width: 40%;
+    float: left;
+    display: block;
+    padding-right: 1%;
+    padding-bottom: 0%;
+  }
+  .news {
+    width: 60%;
+    float: right;
+    padding-left: 1%;
+    padding-bottom: 3%;
+  }
+  .concept__title2 {
+    font-size: 110%;
+  }
+  .concept br {
+    display: block;
+  }
+  .menu-img {
+    -ms-flex-wrap: inherit;
+        flex-wrap: inherit;
+  }
+  .menu-box {
+    width: 23%;
+    margin-left: 3%;
+  }
   .menu-box__img {
-    height: 250px;
+    height: 170px;
   }
   .menu-box__img-whisky {
-    height: 250px;
+    height: 170px;
   }
   .menu-box__img-whisky img {
     -o-object-position: 50% 32%;
        object-position: 50% 32%;
   }
+  .menu-box__text {
+    font-size: 75%;
+    line-height: 1.8em;
+  }
+  .menu-button {
+    padding: 8px 60px 8px 30px;
+  }
+  .poker-header__text {
+    margin-bottom: -3%;
+  }
+  .p-box1__img {
+    height: 350px;
+    margin: -40px 0px 1rem;
+  }
+  .p-box2__img {
+    height: 350px;
+  }
+  .shop-info__boxL {
+    display: block;
+    width: 50%;
+    float: left;
+    padding-right: 1%;
+  }
+  .shop-info__boxR {
+    width: 50%;
+    float: right;
+    display: block;
+    padding-left: 1%;
+  }
+  .shop-img {
+    height: 400px;
+  }
+  .atmosphere-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 5%;
+  }
+  .atmosphere-img {
+    width: 32%;
+    height: 180px;
+    margin-right: 1%;
+  }
+}
+
+@media (min-width: 900px) {
+  .header__nav {
+    display: block;
+  }
+  .hd1200 {
+    display: none;
+  }
+  .hd-nav {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .hd-nav__list {
+    margin: 7px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    color: #e0e0e0 !important;
+    height: 40px;
+  }
+  .hd-nav__list a {
+    text-decoration: none;
+    color: #a1a1a1 !important;
+    margin: 13px 10px 0px 0px;
+  }
+  .atmosphere-img {
+    width: 19%;
+    height: 150px;
+    margin-right: 1%;
+  }
   .reservation {
-    padding: 20% 10%;
+    margin-top: 8%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+  .hd1200 {
+    display: block;
+  }
+  .header__sns img {
+    right: 10px;
+  }
+  .hd-nav__list a {
+    margin: 13px 30px 0px 0px;
+  }
+  .section-inner, .shop-news__inner, .menu__inner, .poker__inner, .shop-info__inner, .atmosphere__inner {
+    margin: 0;
+    padding: 0 15%;
+  }
+  .shop-img {
+    height: 400px;
+  }
+  .shop-img img {
+    padding: 0 15%;
   }
 }
 /*# sourceMappingURL=style.css.map */

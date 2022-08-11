@@ -25,13 +25,6 @@
   margin-bottom: 10%;
 }
 
-
-// .anchor {
-//   display: block;
-//   padding-top: 70px;
-//   margin-top: -70px;
-// }
-
 .shop-news {
   @extend .section-layout;
 
@@ -112,8 +105,12 @@
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 10%;
-    text-align: left;
+    text-align: center;
     letter-spacing: 0.04em;
+  }
+
+  & br {
+    display: none;
   }
 }
 
@@ -313,8 +310,6 @@
   display: flex;
   margin-top: -24px;
   color: #e0e0e0;
-  // margin-left: 0.46em;
-  // margin-right: 0.46em;
 
   &__left {
     display: flex;
@@ -347,8 +342,6 @@
      height: 100%;
      width: 100%;
      object-fit: cover;
-    //  outline : 1px solid #a8915f;
-    //  outline-offset : -8px
     }
   }
 
@@ -385,6 +378,8 @@
   
   &__inner {
     @extend .section-inner;
+    display: inline-block;
+    width: 100%;
   }
   & dt {
     color: #e0e0e0;
@@ -394,7 +389,6 @@
     padding-top: 2%;
     padding-bottom: 2%;
     font-size: 80%;
-    // line-height: 1.2;
     & a {
       color: #a1a1a1 !important;  
       text-decoration:none;
@@ -435,7 +429,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 70%;
   }
 }
   
@@ -500,10 +493,14 @@
   color: #e0e0e0;
   background-image: url(../images/poker-7.webp);
   position: sticky;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color:rgba(156, 137, 52, 0.1);
   background-blend-mode:lighten;
   padding: 30% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__title {
     @extend .section-title;
