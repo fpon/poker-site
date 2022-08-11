@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', (e) =>{
 
 
 
-
 class MobileMenu {
     constructor() {
       this.DOM = {}; 

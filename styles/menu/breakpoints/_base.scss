@@ -26,6 +26,10 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+  &__nav {
+    display: none;
+  }
+
   &__logo {
    margin-left: 15px;
     & img {

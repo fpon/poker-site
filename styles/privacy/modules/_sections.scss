@@ -3,15 +3,13 @@
   padding-top: 5%;
   width: 100%;
 }
-.section-inner {
-  margin: 0;
-  padding: 0 3%;
-}
+
 .section-header {
   width: 100%;
   display: block;
   margin-bottom: 2%;
   text-align: center;
+  padding-top: 70px;
 }
 .section-title {
   font-size: 36px;
@@ -22,7 +20,7 @@
 }
 .section-text {
   font-size: 80%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 
@@ -39,7 +37,6 @@
 
 
 .privacy {
-  padding-top: 20%;
   @extend .section-layout;
   & figure {
     position: relative;

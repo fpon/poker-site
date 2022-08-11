@@ -12,6 +12,7 @@
   display: block;
   margin-bottom: 2%;
   text-align: center;
+  padding-top: 70px;
 }
 .section-title {
   font-size: 36px;
@@ -28,7 +29,6 @@
 
 .menu {
   @extend .section-layout;
-  padding-top: 20%;
 
   &__inner {
     @extend .section-inner;
@@ -46,16 +46,9 @@
   }
 }
 
-.menu-img {
-  margin-bottom: 2%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .menu-box {
-  // width: 49%;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
+  width: 100%;
 
   &__img {
     width: 100%;
@@ -91,6 +84,7 @@
     margin-bottom: 0;
     font-size: 24px;
     color: #a39d7d;
+    font-weight: 1000;
   }
 }
 
@@ -114,6 +108,7 @@
   display: flex;
   margin-top: -24px;
   color: #e0e0e0;
+  
 
   &__left {
     display: flex;
@@ -130,6 +125,7 @@
     padding: 1em;
     border: 1px solid #a8915f;
     font-size: 80%;
+    max-width: 850px;
   }
 }
 

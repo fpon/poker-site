@@ -18,9 +18,9 @@
   @import "breakpoints/900up";
 }
 
-// @media (min-width: 1280px) {
-//   @import "breakpoints/1280up";
-// }
+@media (min-width: 1200px) {
+  @import "breakpoints/1200up";
+}
 
 // @media (min-resolution: 192dpi)
 //       ,(-webkit-min-device-pixel-ratio: 2) {
